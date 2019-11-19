@@ -5,4 +5,41 @@ This Zimbra Universal UI was obtained from Unofficial Zimbra 8.8.5 that created 
 cd /opt/zimbra/jetty/webapps/
 tar -czvf /srv/zimbra-webapps.tgz zimbra
 ```
+The backup file will save in the /srv/ folder
+
+== Download Zimbra Universal UI ==
+```
+cd /tmp/
+wget -c https://github.com/imanudin11/zimbra-ui/raw/master/zimbra-ui.tgz
+```
+
+== Extract and Rsync ==
+```
+tar -zxvf zimbra-ui.tgz
+rsync -avP /tmp/zimbra/ /opt/zimbra/jetty/webapps/zimbra/
+```
+== Remove harmony themes and replace with Universal UI themes ==
+Zimbra using harmony as default themes for webmail
+
+```
+cd /opt/zimbra/jetty/webapps/zimbra/skins/
+rm -rvf harmony/
+ln -sf clarity harmony
+```
+If there are other users who use special themes, you can delete and replace them with Universal UI themes
+
+== Fixperms and Restart Zimbra Mailbox ==
+```
+/opt/zimbra/libexec/zmfixperms -v
+su - zimbra -c "zmmailboxdctl restart"
+```
+Please try access Zimbra webmail from browser. The login screen should be the Zimbra Universal UI. For screenshot, you can check here :
+
+[Zimbra UI]: https://i2.wp.com/imanudin.net/wp-content/uploads/2019/08/zimbra-ui-after-login.png
+
+[example screenshot](https://imanudin.net/2019/08/21/how-to-install-zimbra-universal-ui/)
+
+
+
+
 
