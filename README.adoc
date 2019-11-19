@@ -33,12 +33,9 @@ If there are other users who use special themes, you can delete and replace them
 /opt/zimbra/libexec/zmfixperms -v
 su - zimbra -c "zmmailboxdctl restart"
 ```
-Please try access Zimbra webmail from browser. The login screen should be the Zimbra Universal UI. For screenshot, you can check here :
+Please try access Zimbra webmail from browser. The login screen should be the Zimbra Universal UI. For screenshot, you can check here : https://imanudin.net/2019/08/21/how-to-install-zimbra-universal-ui/
 
-[Zimbra UI]: https://i2.wp.com/imanudin.net/wp-content/uploads/2019/08/zimbra-ui-after-login.png
-
-[example screenshot](https://imanudin.net/2019/08/21/how-to-install-zimbra-universal-ui/)
-
+![alt text](https://i2.wp.com/imanudin.net/wp-content/uploads/2019/08/zimbra-ui-after-login.png "Zimbra UI")
 
 
 
