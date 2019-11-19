@@ -1,1 +1,7 @@
-The Zimbra Universal UI was obtained from Unofficial Zimbra 8.8.5 that created by Zeta Alliance
+This Zimbra Universal UI was obtained from Unofficial Zimbra 8.8.5 that created by Zeta Alliance. I am copying zimbra folder from webapps and save into my Github. This Zimbra Universal UI have been tested by me on Zimbra 8.8.12/8.8.15 and working properly. If you want to try installing this Zimbra Universal UI on your Zimbra, please try the guide below
+== Backup Zimbra folder from webapps ==
+```
+cd /opt/zimbra/jetty/webapps/
+tar -czvf /srv/zimbra-webapps.tgz zimbra
+```
+
